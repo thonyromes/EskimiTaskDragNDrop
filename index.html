@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag 'N Drop</title>
+    <link rel="stylesheet" href="./static/css/main.css" />
+  </head>
+  <body>
+    <!-- <div class="drag" data-target=".drop">
+        <div class="dragtext">drag me</div>
+      </div>
+
+      <div class="drop">
+        <div class="droptext">dropped</div>
+      </div>
+      <div class="debug"></div> -->
+
+    <div class="wrapper">
+      <div class="writing-container">
+        <img
+          src="./static/img/writing-unfilled.jpg"
+          alt="writing"
+          class="writing"
+        />
+      </div>
+      <div class="map-container">
+        <img src="./static/img/map-unfilled.jpg" alt="map" class="map drop" />
+      </div>
+      <div class="icons-container">
+        <div class="icon">
+          <img
+            src="./static/img/icons/1.jpg"
+            alt="icon 1"
+            class="icon-img drag"
+            data-target=".drop"
+            draggable="false"
+          />
+        </div>
+        <div class="icon icon1">
+          <img
+            src="./static/img/icons/2.jpg"
+            alt="icon 2"
+            class="icon-img drag"
+            data-target=".drop"
+            draggable="false"
+          />
+        </div>
+        <div class="icon">
+          <img
+            src="./static/img/icons/3.jpg"
+            alt="icon 3"
+            class="icon-img drag"
+            data-target=".drop"
+            draggable="false"
+          />
+        </div>
+        <div class="icon">
+          <img
+            src="./static/img/icons/4.jpg"
+            alt="icon 4"
+            class="icon-img drag"
+            data-target=".drop"
+            draggable="false"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./static/js/jquery-3.6.0.min.js"></script>
+    <script src="./static//js/main.js"></script>
+  </body>
+</html>

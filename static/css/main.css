@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes bye {
+  0% {
+    transform: scale(1) rotate(-1deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-2deg);
+  }
+  100% {
+    transform: scale(0) rotate(3deg);
+  }
+}
+
+@keyframes begindrag {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-16deg);
+  }
+  30% {
+    transform: rotate(12deg);
+  }
+  55% {
+    transform: rotate(-6deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+.drop {
+  position: relative;
+}
+
+.drag {
+  position: relative;
+  cursor: move;
+  z-index: 30;
+  transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+.beginDrag {
+  animation: begindrag 0.8s ease forwards;
+}
+
+.dragged {
+  position: absolute;
+  transform: rotate(-1deg);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.readyDrop {
+  opacity: 0.8 !important;
+  transition: opacity 0.3s ease;
+}
+
+.bye {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  animation: bye 0.4s ease forwards;
+}
+
+.wrapper {
+  user-select: none;
+  margin: 5rem;
+  padding: 2rem;
+  width: 25rem;
+  height: 30rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.writing-container {
+  margin-bottom: 2rem;
+}
+
+.map-container {
+  margin-bottom: 2rem;
+  text-align: center;
+  flex: 1;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+.icon-img,
+.map {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.map {
+  height: 15rem;
+}
+
+.icon-img {
+  width: 3rem;
+  height: 3rem;
+}
